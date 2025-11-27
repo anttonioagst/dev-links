@@ -7,26 +7,25 @@
 }
 
 :root {
---text-color: #ffffff;
---bg-url: url(./assets/assets/bg-mobile-main-dark.jpg);
---tag-color: url(./assets/assets/tag-anttonio-white.svg);
---stroke-color:rgba(255, 255, 255, 0.5);
---surface-color: rgba(255, 255, 255, 0.1);
---surface-color-hover: rgba(255, 255, 255, 0.5);
---highlight-color: rgba(255, 255, 255, 0.2);
---switch-bg-url: url(./assets/assets/moon-stars.svg);
-
+  --text-color: #ffffff;
+  --bg-url: url(./assets/assets/bg-mobile-main-dark.jpg);
+  --tag-color: url(./assets/assets/tag-anttonio-white.svg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.5);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/assets/moon-stars.svg);
 }
 
 .light {
- --text-color: #000000;
- --bg-url: url(./assets/assets/bg-mobile-main-light.jpg);
- --tag-color: url(./assets/assets/tag-anttonio-dark.svg);
- --stroke-color:rgba(0, 0, 0, 0.5);
- --surface-color: rgba(0, 0, 0, 0.05);
- --surface-color-hover: rgba(0, 0, 0, 0.02);
- --highlight-color: rgba(0, 0, 0, 0.1);
- --switch-bg-url: url(./assets/assets/sun.svg);
+  --text-color: #000000;
+  --bg-url: url(./assets/assets/bg-mobile-main-light.jpg);
+  --tag-color: url(./assets/assets/tag-anttonio-dark.svg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/assets/sun.svg);
 }
 
 body {
@@ -35,11 +34,14 @@ body {
 
 body * {
   font-family: "Inter", sans-serif;
-  color: var(--text-color)
+  color: var(--text-color);
 }
 
+/* Container */
+
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0;
   padding: 0 24px;
 }
@@ -64,41 +66,40 @@ body * {
 
 /* Switch */
 #switch {
-position: relative;
-width: 64px;
+  position: relative;
+  width: 64px;
 
-margin: 4px auto;
+  margin: 4px auto;
 }
 
 .light #switch button {
-right: 0;
-left: initial;
+  right: 0;
+  left: initial;
 }
 
 #switch button {
-width: 32px;
-height: 32px;
-background: #ffffff var(--switch-bg-url) no-repeat center;
-border: 0;
-border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background: #ffffff var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
 
-position: absolute;
-top: 50%;
-left: 0;
-z-index: 1;
-transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
 }
 
 #switch span {
-display: block;
-width: 64px;
-height: 24px;
-background-color: var(--surface-color);
-border: 1px solid var(--stroke-color);
-backdrop-filter: blur(4px);
--webkit-backdrop-filter: blur(4px);
-border-radius: 9999px;
-
+  display: block;
+  width: 64px;
+  height: 24px;
+  background-color: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
 }
 
 /* links */
@@ -160,10 +161,9 @@ ul li a:hover {
 }
 
 footer {
-padding: 24px;
-text-align: center;
-font-size: 14px;
-
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
 }
 
 /* tag anttonio */
@@ -176,5 +176,4 @@ font-size: 14px;
   background-repeat: no-repeat;
   background-size: contain;
   vertical-align: middle;
-
 }
