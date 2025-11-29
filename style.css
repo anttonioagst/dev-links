@@ -31,6 +31,7 @@
 body {
   background: var(--bg-url) no-repeat top center/cover;
   height: 100vh;
+  min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
 }
@@ -73,6 +74,10 @@ body * {
   width: 64px;
 
   margin: 4px auto;
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .light #switch button {
@@ -132,15 +137,17 @@ ul li a {
   border-radius: 8px;
 
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4);
+  -webkit-backdrop-filter: blur(4px);
   transition: background 0.2s;
 
   font-weight: 500;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 ul li a:hover {
   background: var(--surface-color-hover);
-  border: 1px solid var(--);
+  border: 1px solid var(--stroke-color);
 }
 
 /* social links*/
@@ -162,6 +169,8 @@ ul li a:hover {
 
   border-radius: 50%;
   transition: background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 #social-links a:hover {
